@@ -1,0 +1,23 @@
+{
+  "name": "deaths",
+  "version": "1.0.0",
+  "description": "Testing nodejs",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd front-end && npm run build && node ..\\back-end\\application.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api"
+  ],
+  "author": "Emanuel Victor",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "puppeteer": "^8.0.0"
+  }
+}

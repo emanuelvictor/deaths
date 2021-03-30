@@ -1,5 +1,5 @@
 {
-  "name": "deaths",
+  "name": "deaths-back-end",
   "version": "1.0.0",
   "description": "Testing nodejs",
   "main": "server.js",
