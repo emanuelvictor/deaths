@@ -1,0 +1,18 @@
+// TABLE
+#default-table {
+  mat-table {
+    .actions {
+      max-width: 90px;
+    }
+  }
+}
+
+inventariar-patrimonios, vincular-centro-custo {
+  mat-expansion-panel {
+    mat-card-content {
+      margin-bottom: 0;
+    }
+
+    box-shadow: none !important;
+  }
+}

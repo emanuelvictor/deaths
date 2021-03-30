@@ -1,0 +1,36 @@
+<div class='main-content' style='margin-top: 0'>
+    <div class='toolbar' layout='row' flex>
+        <div layout='column'>
+            <div class='headline' [innerHTML]="'Obituário'"></div>
+            <div class='subhead' [innerHTML]="'Foz do Iguaçu'"></div>
+        </div>
+    </div>
+    <mat-card id='default-form'>
+        <div layout='row' layout-sm='column' layout-xs='column'>
+            <div layout='column' flex layout-align='start start'>
+                <label class='title' layout-align='start start'>Nome:</label>
+                <label class='text' layout-align='start start'>Foz do Iguaçu</label>
+            </div>
+
+            <vertical-space></vertical-space>
+
+            <div layout='column' flex layout-align='start start'>
+                <label class='title' layout-align='start start'>Data de Início:</label>
+                <label class='text' layout-align='start start'>início</label>
+            </div>
+
+            <vertical-space></vertical-space>
+
+            <div layout='column' flex layout-align='start start'>
+                <label class='title' layout-align='start start'>Data de Término:</label>
+                <label class='text' layout-align='start start'>termino</label>
+            </div>
+
+
+            <ngx-charts-advanced-pie-chart [results]='single2' [view]='[700,200]'
+                                           [scheme]="{ domain: ['#fd4d4e', '#F6B800',  '#2DB45C', 'blue']}">
+            </ngx-charts-advanced-pie-chart>
+        </div>
+
+    </mat-card>
+</div>
