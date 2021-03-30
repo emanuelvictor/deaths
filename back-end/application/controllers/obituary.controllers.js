@@ -10,7 +10,7 @@ exports.get = async (req, res) => {
 
     let data = [];
     let elements = document.getElementsByClassName('LabelTitulo');
-console.log('elemtns length', elements.length)
+        console.log('elemtns length', elements.length)
     for (var i = 0; i < elements.length; i++) {
         death = {
             person : {}
