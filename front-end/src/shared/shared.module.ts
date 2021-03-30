@@ -53,7 +53,6 @@ import {
   CovalentMediaModule
 } from '@covalent/core';
 import {CovalentMarkdownModule} from '@covalent/markdown';
-import {CapitalizePipe} from "../sistema/application/controls/pipes/capitalize.pipe";
 import {HorizontalSpaceComponent} from "../sistema/application/controls/horizontal-space.component";
 import {VerticalSpaceComponent} from "../sistema/application/controls/vertical-space.component";
 import {FocusOnInitDirective} from "../sistema/application/utils/focus-on-init.directive";
@@ -68,9 +67,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     // Controls
     HorizontalSpaceComponent,
     VerticalSpaceComponent,
-
-    // Pipe
-    CapitalizePipe,
 
     // DIRECTIVES
     FocusOnInitDirective,

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {viewAnimation} from "../../../../../utils/utils";
 import {DeathRepository} from "../../../../../../domain/repository/death.repository";
 
 // @ts-ignore
@@ -7,9 +6,6 @@ import {DeathRepository} from "../../../../../../domain/repository/death.reposit
   selector: 'visualizar-inventario',
   templateUrl: './visualizar-inventario.component.html',
   styleUrls: ['../inventarios.scss'],
-  animations: [
-    viewAnimation
-  ]
 })
 export class VisualizarInventarioComponent implements OnInit {
 

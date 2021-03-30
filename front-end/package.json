@@ -1,12 +1,10 @@
 {
-  "name": "portal-base",
+  "name": "deaths-front-end",
   "version": "1.0.2",
   "private": true,
   "scripts": {
     "sistema": "ng serve --proxy-config proxy.conf.json sistema --port 4200 --open",
-    "portal": "ng serve --proxy-config proxy.conf.json portal --port 9000 --open",
-    "all": "npm run sistema & npm run portal",
-    "mavenbuild": "ng build --prod sistema"
+    "build": "ng build --prod sistema"
   },
   "dependencies": {
     "@angular/animations": "^8.2.7",
