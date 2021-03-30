@@ -46,16 +46,5 @@ exports.get = async (req, res) => {
 
   await browser.close();
 
-  const resume = {MORTES_POR_COVID : 0, MORTES_POR_OUTROS_MOTIVOS : 0, AGUARDANDO_RESULTADOS_DE_EXAMES:0, TOTAL : 0}
-  for (var i = 0; i < deaths.length; i++) {
-    if(deaths[i].covid === true)
-      resume.MORTES_POR_COVID = resume.MORTES_POR_COVID + 1;
-    if(deaths[i].covid === false)
-      resume.MORTES_POR_OUTROS_MOTIVOS = resume.MORTES_POR_OUTROS_MOTIVOS + 1;
-    if(deaths[i].covid === undefined)
-      resume.AGUARDANDO_RESULTADOS_DE_EXAMES = resume.AGUARDANDO_RESULTADOS_DE_EXAMES + 1;
-  }
-
-  resume.TOTAL = resume.AGUARDANDO_RESULTADOS_DE_EXAMES + resume.MORTES_POR_COVID +  resume.MORTES_POR_OUTROS_MOTIVOS;
-  res.status(200).send(resume)
+  res.status(200).send(deaths)
 };
