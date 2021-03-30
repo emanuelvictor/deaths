@@ -4,7 +4,7 @@
   "description": "Testing nodejs",
   "main": "server.js",
   "scripts": {
-    "start": "cd front-end && npm run build && node ..\\back-end\\application.js"
+    "start": "cd front-end && npm install && npm run build && cd ..\\back-end && npm install && node application.js"
   },
   "keywords": [
     "nodejs",
