@@ -27,7 +27,7 @@ const browser = await chromium.puppeteer.launch({
 var teste = 'antes';
    await page.screenshot({'\\back-end\\example.png', fullPage: true });
    teste = 'depois';
-   return teste;
+    res.status(200).send(teste)
 //   res.sendFile(__dirname + '\\back-end\\example.png');
 
 
