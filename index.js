@@ -1,5 +1,7 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
+// import * as puppeteer from 'puppeteer';
+const chromium = require('chrome-aws-lambda');
 const app = express();
 
 app.get('/', (req, res) => res.send('FOI'));
@@ -7,13 +9,21 @@ app.get('/', (req, res) => res.send('FOI'));
 app.get('/about', async (req, res) => {
 
 try {
-  const browser = await puppeteer.launch({
-                     headless: true,
-                     'args' : [
-                       '--no-sandbox',
-                       '--disable-setuid-sandbox'
-                     ]
-                   });
+//  const browser = await puppeteer.launch({
+//                     headless: true,
+//                     'args' : [
+//                       '--no-sandbox',
+//                       '--disable-setuid-sandbox'
+//                     ]
+//                   });
+const browser = await chromium.puppeteer.launch({
+    args: [...chromium.args, "--hide-scrollbars", "--disable-web-security"],
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath,
+    headless: true,
+    ignoreHTTPSErrors: true,
+  })
+
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
@@ -67,7 +77,7 @@ try {
 }
 catch (e) {
     console.log(e)
-    res.status(200).send({'erro':'erro'})
+    res.status(200).send({'erro':e})
  // statements to handle any exceptions
  }
 
