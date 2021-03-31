@@ -27,8 +27,8 @@ const browser = await chromium.puppeteer.launch({
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
-   await page.screenshot({ path:'/back-end/example.png', fullPage: true });
-         res.sendFile('/back-end/example.png');
+   await page.screenshot({ path:'./back-end/example.png', fullPage: true });
+         res.sendFile('./back-end/example.png');
 
 
 //   let deaths = await page.evaluate(() => {
