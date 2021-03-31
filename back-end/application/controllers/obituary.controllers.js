@@ -12,7 +12,7 @@ exports.get = async (req, res) => {
   const page = await browser.newPage();
   await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
-  await page.screenshot({ path: __dirname + '\\example.png' });
+  await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
 
 //  let deaths = await page.evaluate(() => {
 //
