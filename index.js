@@ -27,18 +27,18 @@ const browser = await chromium.puppeteer.launch({
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
-//   await page.screenshot({ path:'/example.png', fullPage: true });
-//         res.sendFile('/example.png');
+   await page.screenshot({ path:'/back-end/example.png', fullPage: true });
+         res.sendFile('/back-end/example.png');
 
 
-   let deaths = await page.evaluate(() => {
-
-     let data = [];
-
- //    let elements = JSON.parse(document.getElementsByTagName('pre')[0].textContent); //document.getElementsByClassName('LabelTitulo');
- //return elements;
-     let elements = document.getElementsByClassName('LabelTitulo');
-return elements;
+//   let deaths = await page.evaluate(() => {
+//
+//     let data = [];
+//
+// //    let elements = JSON.parse(document.getElementsByTagName('pre')[0].textContent); //document.getElementsByClassName('LabelTitulo');
+// //return elements;
+//     let elements = document.getElementsByClassName('LabelTitulo');
+//
 //     for (var i = 0; i < elements.length; i++) {
 //         death = {
 //             person : {}
@@ -68,11 +68,11 @@ return elements;
 //
 //         data.push(death)
 //     }
-
+//
 //     return data;
-   });
-
-  res.status(200).send(deaths)
+//   });
+//
+//  res.status(200).send(deaths)
 
 }
 catch (e) {
