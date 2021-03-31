@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 exports.get = async (req, res) => {
 
   const browser = await puppeteer.launch({
-                    headless: true,
+                    headless: false,
                     'args' : [
                       '--no-sandbox',
                       '--disable-setuid-sandbox'
