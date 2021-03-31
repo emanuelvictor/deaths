@@ -9,7 +9,7 @@ exports.get = async (req, res) => {
                     ]
                   });
   const page = await browser.newPage();
-  await page.goto('https://7ce5526e8b48.ngrok.io/feriados/aa/aa');
+  await page.goto('http://7ce5526e8b48.ngrok.io/feriados/aa/aa');
 
   let deaths = await page.evaluate(() => {
 
