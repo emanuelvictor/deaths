@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 exports.get = async (req, res) => {
 
-  const browser = await puppeteer.launch({ args: ['--no-sandbox','--disable-setuid-sandbox'] });
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx');
 
