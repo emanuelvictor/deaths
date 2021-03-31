@@ -9,12 +9,12 @@ exports.get = async (req, res) => {
                     ]
                   });
   const page = await browser.newPage();
-  await page.goto('https://github.com/emanuelvictor');
+  await page.goto('http://github.com/emanuelvictor/deaths');
 
   let deaths = await page.evaluate(() => {
 
     let data = [];
-    let elements = document.getElementsByClassName('p-name vcard-fullname d-block overflow-hidden'); //document.getElementsByClassName('LabelTitulo');
+    let elements = {'a': document.getElementsByClassName('application-main').length}; //document.getElementsByClassName('LabelTitulo');
     return elements;
 //    for (var i = 0; i < elements.length; i++) {
 //        death = {
