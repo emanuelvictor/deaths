@@ -27,8 +27,8 @@ const browser = await chromium.puppeteer.launch({
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
-   await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
-         res.sendFile(__dirname + '\\example.png');
+   await page.screenshot({ path:'example.png', fullPage: true });
+         res.sendFile('example.png');
 
 
 //   let deaths = await page.evaluate(() => {
@@ -45,7 +45,7 @@ const browser = await chromium.puppeteer.launch({
 //         };
 //
 //         death.person.name = document.getElementById('wucSircObituario_DataList1_dtlFalecimentos_lblNome0_' + i).textContent
-//         death.person.age = document.getElementById('wucSircObituario_DataList1_dtlFalecimentos_lblIdade0_' + i).textContent.toLowerCase().replace(' anos', '') //TODO ISOLATE
+//         death.person.age = document.getElementById('wucSircObituario_DataList1_dtlFalecimentos_lblIdade0_' + i).textContent.toLowerCase().replace(' anos', '')
 //
 //         const rawDate = document.getElementById('wucSircObituario_DataList1_dtlFalecimentos_Label14_' + i).textContent.toLowerCase()
 //         death.date = rawDate.substring(0, rawDate.indexOf('à') -1)
