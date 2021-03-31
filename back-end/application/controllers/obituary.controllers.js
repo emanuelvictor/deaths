@@ -14,7 +14,7 @@ exports.get = async (req, res) => {
   let deaths = await page.evaluate(() => {
 
     let data = [];
-    let elements = {'foi': document.getElementsByTagName('pre').length}; //document.getElementsByClassName('LabelTitulo');
+    let elements = document.getElementsByTagName('pre')[0].textContent; //document.getElementsByClassName('LabelTitulo');
     return elements;
 //    for (var i = 0; i < elements.length; i++) {
 //        death = {
