@@ -2,14 +2,19 @@ const puppeteer = require('puppeteer');
 
 exports.get = async (req, res) => {
 
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+  const browser = await puppeteer.launch({
+                    'args' : [
+                      '--no-sandbox',
+                      '--disable-setuid-sandbox'
+                    ]
+                  });
   const page = await browser.newPage();
-  await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx');
+  await page.goto('https://github.com/emanuelvictor');
 
   let deaths = await page.evaluate(() => {
 
     let data = [];
-    let elements = document.getElementsByClassName('LabelTitulo');
+    let elements = document.getElementsByClassName('p-name vcard-fullname d-block overflow-hidden'); //document.getElementsByClassName('LabelTitulo');
     return elements;
 //    for (var i = 0; i < elements.length; i++) {
 //        death = {
@@ -46,5 +51,5 @@ exports.get = async (req, res) => {
 
   const version = await browser.version();
 
-  res.status(200).send(version)
+  res.status(200).send(deaths)
 };
