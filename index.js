@@ -62,11 +62,12 @@ try {
      return data;
    });
 
-  res.status(200).send(deaths)
+  res.status(200).send({'mortes':'mortes'})
+
 }
 catch (e) {
     console.log(e)
-    res.status(200).send(e)
+    res.status(200).send({'erro':'erro'})
  // statements to handle any exceptions
  }
 
