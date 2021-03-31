@@ -72,7 +72,7 @@ const browser = await chromium.puppeteer.launch({
      return data;
    });
 
-  res.status(200).send({'mortes':'mortes'})
+  res.status(200).send(deaths)
 
 }
 catch (e) {
