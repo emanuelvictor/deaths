@@ -2,7 +2,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const app = express();
 
-app.get('/', (req, res) => res.send('Home Page Route'));
+app.get('/', (req, res) => res.send('FOI'));
 
 app.get('/about', async (req, res) => {
 
