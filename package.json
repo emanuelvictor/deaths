@@ -4,7 +4,7 @@
   "description": "Testing nodejs",
   "main": "server.js",
   "scripts": {
-    "start": "cd back-end && npm install && node --unhandled-rejections=strict application.js"
+    "start": "node index.js"
   },
   "keywords": [
     "nodejs",
