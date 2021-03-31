@@ -10,7 +10,12 @@ exports.get = async (req, res) => {
                     ]
                   });
   const page = await browser.newPage();
-  await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx');
+  await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx',
+  {
+    waitUntil: ['load', 'networkidle0', 'domcontentloaded']
+  })
+
+  await page.waitFor(1000)
 
 
   let deaths = await page.evaluate(() => {
