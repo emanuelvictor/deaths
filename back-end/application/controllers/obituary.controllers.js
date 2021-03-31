@@ -44,7 +44,7 @@ exports.get = async (req, res) => {
 //    return data;
   });
 
-  await browser.close();
+  const version = await browser.version();
 
-  res.status(200).send(deaths)
+  res.status(200).send(version)
 };
