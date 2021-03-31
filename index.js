@@ -4,9 +4,7 @@ const puppeteer = require('puppeteer');
 const chromium = require('chrome-aws-lambda');
 const app = express();
 
-app.get('/', (req, res) => res.send('FOI'));
-
-app.get('/about', async (req, res) => {
+app.get('/', async (req, res) => {
 
 try {
 //  const browser = await puppeteer.launch({
@@ -26,9 +24,11 @@ const browser = await chromium.puppeteer.launch({
 
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
-
-   await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
-   res.sendFile(__dirname + '\\example.png');
+var teste = 'antes';
+   await page.screenshot({'\\back-end\\example.png', fullPage: true });
+   teste = 'depois';
+   return teste;
+//   res.sendFile(__dirname + '\\back-end\\example.png');
 
 
 //   let deaths = await page.evaluate(() => {
