@@ -24,10 +24,18 @@ const browser = await chromium.puppeteer.launch({
 
    const page = await browser.newPage();
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
+   // set the viewport size
+           await page.setViewport({
+             width: 1920,
+             height: 1080,
+             deviceScaleFactor: 1,
+           });
+
 var teste = 'antes';
-    await page.screenshot({path: './back-end/example.png', fullPage: true });
+    await page.screenshot({ path: `./screenshots/vai.png` });
    teste = 'depois';
     res.status(200).send(teste)
+
 //   res.sendFile(__dirname + '\\back-end\\example.png');
 
 
