@@ -56,6 +56,5 @@ erro = '3'
      return data;
    });
 res.status(200).send(deaths)
-}
 
 };
