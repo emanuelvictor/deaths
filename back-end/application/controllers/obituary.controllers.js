@@ -59,7 +59,7 @@ erro = '2'
 res.status(200).send(deaths)
 }
 catch (e) {
-res.status(500).send('erro')
+res.status(500).send(erro)
  }
 
 
