@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 
 exports.get = async (req, res) => {
 var erro = 'init';
-try {erro = '2'
   const browser = await puppeteer.launch({
                      headless: true,
                      'args' : [
@@ -58,9 +57,5 @@ erro = '3'
    });
 res.status(200).send(deaths)
 }
-catch (e) {
-res.status(500).send(e)
- }
-
 
 };
