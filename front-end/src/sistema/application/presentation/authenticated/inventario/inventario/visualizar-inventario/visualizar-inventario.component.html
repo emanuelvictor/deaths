@@ -7,30 +7,31 @@
     </div>
     <mat-card id='default-form'>
         <div layout='row' layout-sm='column' layout-xs='column'>
-            <div layout='column' flex layout-align='start start'>
-                <label class='title' layout-align='start start'>Cidade:</label>
-                <label class='text' layout-align='start start'>Foz do Iguaçu</label>
+            <div flex layout='row' layout-md='column' layout-xs='column'>
+                <div layout='column' flex layout-align='start start'>
+                    <label class='title' layout-align='start start'>Cidade:</label>
+                    <label class='text' layout-align='start start'>Foz do Iguaçu</label>
+                </div>
+
+                <vertical-space></vertical-space>
+
+                <div layout='column' flex layout-align='start start'>
+                    <label class='title' layout-align='start start'>Data de Início:</label>
+                    <label class='text' layout-align='start start'>{{init_date}}</label>
+                </div>
+
+                <vertical-space></vertical-space>
+
+                <div layout='column' flex layout-align='start start'>
+                    <label class='title' layout-align='start start'>Data de Término:</label>
+                    <label class='text' layout-align='start start'>{{final_date}}</label>
+                </div>
             </div>
-
-            <vertical-space></vertical-space>
-
-            <div layout='column' flex layout-align='start start'>
-                <label class='title' layout-align='start start'>Data de Início:</label>
-                <label class='text' layout-align='start start'>início</label>
+            <div flex style='margin: 30px 0px 30px 0px;'>
+                <ngx-charts-advanced-pie-chart [results]='single2' [animations]='false'
+                    [scheme]="{ domain: ['#fd4d4e', '#F6B800',  '#2DB45C', 'blue']}">
+                </ngx-charts-advanced-pie-chart>
             </div>
-
-            <vertical-space></vertical-space>
-
-            <div layout='column' flex layout-align='start start'>
-                <label class='title' layout-align='start start'>Data de Término:</label>
-                <label class='text' layout-align='start start'>termino</label>
-            </div>
-
-
-            <ngx-charts-advanced-pie-chart [results]='single2' [view]='[700,200]' [animations]='false'
-                                           [scheme]="{ domain: ['#fd4d4e', '#F6B800',  '#2DB45C', 'blue']}">
-            </ngx-charts-advanced-pie-chart>
         </div>
-
     </mat-card>
 </div>
