@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 exports.get = async (req, res) => {
-
+var erro = 'init';
 try {
   const browser = await puppeteer.launch({
                      headless: true,
@@ -11,8 +11,9 @@ try {
                      ]
                    });
    const page = await browser.newPage();
-   await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
 
+   await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
+erro = '2'
 //   await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
 
    let deaths = await page.evaluate(() => {
