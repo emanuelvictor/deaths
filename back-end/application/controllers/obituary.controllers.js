@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 exports.get = async (req, res) => {
 var erro = 'init';
-try {
+try {erro = '2'
   const browser = await puppeteer.launch({
                      headless: true,
                      'args' : [
@@ -11,13 +11,13 @@ try {
                      ]
                    });
    const page = await browser.newPage();
-
+erro = '3'
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
-
+erro = '4'
 //   await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
 
    let deaths = await page.evaluate(() => {
-erro = '2'
+
      let data = [];
 
  //    let elements = JSON.parse(document.getElementsByTagName('pre')[0].textContent); //document.getElementsByClassName('LabelTitulo');
