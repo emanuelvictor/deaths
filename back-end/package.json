@@ -4,9 +4,7 @@
   "description": "Testing nodejs",
   "main": "server.js",
   "scripts": {
-    "test": "k6 run -e API_BASE=https://feriados-instruct.herokuapp.com tests-open.js",
-    "development": "node application.js development",
-    "start": "npx sequelize-cli db:migrate --url 'postgres://edlwqacsuzjyqy:61e69efa473790b6886da7f4ce433fa8dc0156a7453b62643c6dfdb7780f6549@ec2-18-235-109-97.compute-1.amazonaws.com:5432/dbfu3urnfv066d' && node application.js"
+    "development": "node application.js development"
   },
   "keywords": [
     "nodejs",
