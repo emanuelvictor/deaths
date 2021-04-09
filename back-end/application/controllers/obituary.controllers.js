@@ -13,17 +13,17 @@ try {
    const page = await browser.newPage();
 
    await page.goto('http://www3.pmfi.pr.gov.br/PSIPortal/SircofWeb/Formularios/wfrmSircObituario_Site.aspx')
-erro = '2'
+
 //   await page.screenshot({ path: __dirname + '\\example.png', fullPage: true });
 
    let deaths = await page.evaluate(() => {
-
+erro = '2'
      let data = [];
 
  //    let elements = JSON.parse(document.getElementsByTagName('pre')[0].textContent); //document.getElementsByClassName('LabelTitulo');
  //return elements;
      let elements = document.getElementsByClassName('LabelTitulo');
-
+erro = '3'
      for (var i = 0; i < elements.length; i++) {
          death = {
              person : {}
