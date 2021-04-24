@@ -1,7 +1,6 @@
 import {SharedModule} from '../../shared/shared.module';
 import {Interceptor} from '../application/interceptor/interceptor';
 import {DeathRepository} from "./repository/death.repository";
-import {VisualizarInventarioComponent} from "../application/presentation/authenticated/inventario/inventario/visualizar-inventario/visualizar-inventario.component";
 import {CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID, NgModule} from "@angular/core";
 
 import {CommonModule, registerLocaleData} from "@angular/common";
@@ -20,6 +19,7 @@ import {CovalentSearchModule} from "@covalent/core";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {PieChartModule} from "@swimlane/ngx-charts";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { VisualizarObituarioComponent } from 'sistema/application/presentation/authenticated/obituario/obituario/visualizar-obituario/visualizar-obituario.component';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -39,7 +39,7 @@ export function customTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     // COMPONENTS
-    VisualizarInventarioComponent,
+    VisualizarObituarioComponent,
 
   ],
   imports: [
@@ -86,7 +86,7 @@ export function customTranslateLoader(http: HttpClient) {
     // Internacionalizacao MatPaginator
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
-  bootstrap: [VisualizarInventarioComponent]
+  bootstrap: [VisualizarObituarioComponent]
 })
 export class SistemaModule {
 }

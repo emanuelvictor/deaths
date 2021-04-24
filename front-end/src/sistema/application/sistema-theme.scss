@@ -245,7 +245,7 @@ mat-sidenav,
   padding: 10px 0 10px 0;
 }
 
-#inventarios-selecionados {
+#obituarios-selecionados {
   .mat-form-field-infix {
     padding: 13px 0 5px 0;
   }
@@ -438,7 +438,7 @@ input.mat-input-element {
   }
 }
 
-editar-inventario, visualizar-inventario, inserir-inventario, executar-inventario, editar-inventario-vincular-centros-custo, editar-trasnferencias, visualizar-movimentacao {
+editar-obituario, visualizar-obituario, inserir-obituario, executar-obituario {
   mat-expansion-panel {
     box-shadow: none !important;
   }

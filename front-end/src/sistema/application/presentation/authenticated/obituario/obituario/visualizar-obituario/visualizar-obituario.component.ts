@@ -4,11 +4,11 @@ import {DeathRepository} from "../../../../../../domain/repository/death.reposit
 
 // @ts-ignore
 @Component({
-  selector: 'visualizar-inventario',
-  templateUrl: './visualizar-inventario.component.html',
-  styleUrls: ['../inventarios.scss'],
+  selector: 'visualizar-obituario',
+  templateUrl: './visualizar-obituario.component.html',
+  styleUrls: ['../obituario.scss'],
 })
-export class VisualizarInventarioComponent implements OnInit {
+export class VisualizarObituarioComponent implements OnInit {
 
   /**
    *
@@ -24,8 +24,7 @@ export class VisualizarInventarioComponent implements OnInit {
    * @param activatedRoute
    * @param messageService
    * @param authenticationService
-   * @param inventarioRepository
-   * @param centroCustoInventarioRepository
+   * @param deathsRepository
    */
   constructor(private deathRepository: DeathRepository) {
 
