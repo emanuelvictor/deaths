@@ -10,6 +10,8 @@
 package-lock.json
 /front-end/node_modules
 /back-end/node_modules
+/container/node_modules
+/container/application/presentation
 
 # IDEs and editors
 /.idea
