@@ -4,7 +4,7 @@
   "description": "App to monitoring deaths of the Foz do Iguaçu city",
   "scripts": {
     "buildt": "cd ./front-end && npm install --silent && npm run build --silent",
-    "start": "cd ../container && npm start"
+    "start": "cd ./container && npm start"
   },
   "author": "Emanuel Victor",
   "license": "ISC"
