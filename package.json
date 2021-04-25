@@ -1,25 +1,10 @@
 {
   "name": "deaths",
   "version": "1.0.2",
-  "description": "Testing nodejs",
-  "main": "server.js",
+  "description": "App to monitoring deaths of the Foz do Iguaçu city",
   "scripts": {
-    "start": "npm install && node index.js"
+    "start": "npm install --prefix ./front-end && npm start --prefix ./front-end"
   },
-  "keywords": [
-    "nodejs",
-    "express",
-    "rest",
-    "api"
-  ],
   "author": "Emanuel Victor",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "chrome-aws-lambda": "^8.0.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "puppeteer": "^8.0.0",
-    "puppeteer-core": "^8.0.0"
-  }
+  "license": "ISC"
 }
