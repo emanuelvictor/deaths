@@ -13,7 +13,6 @@ exports.get = async (req, res) => {
                 // headers such as "Cookie" can be extracted from req object and sent to /test
             }
         }, function (response) {
-            console.log(response)
             var data = '';
             response.setEncoding('utf8');
             response.on('data', (chunk) => {
