@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "App to monitoring deaths of the Foz do Iguaçu city",
   "scripts": {
-    "start": "npm install --prefix ./front-end && npm start --prefix ./front-end"
+    "start": "cd ./front-end && npm install && npm run build && cd ../container && npm start"
   },
   "author": "Emanuel Victor",
   "license": "ISC"

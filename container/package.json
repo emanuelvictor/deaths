@@ -4,7 +4,8 @@
   "description": "Testing nodejs",
   "main": "server.js",
   "scripts": {
-    "development": "node application.js development"
+    "start": "node application.js",
+    "poststart": "Container started!"
   },
   "keywords": [
     "nodejs",

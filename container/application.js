@@ -16,13 +16,6 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 
-// const db = require("./domain/entities");
-// db.sequelize.sync();
-
-// // Create custom functions
-// const customFunctions = require("./infrastructure/db/custom-functions");
-// customFunctions.createGetEasterByYear();
-
 require("./application/routes/obituary.routes")(app);
 
 // Screens configuration

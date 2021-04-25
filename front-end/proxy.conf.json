@@ -1,7 +1,7 @@
 {
 
   "/api": {
-    "target": "http://127.0.0.1:80/api",
+    "target": "http://152.67.60.189:80/api",
     "changeOrigin": true,
     "secure": false,
     "pathRewrite": {
@@ -11,7 +11,7 @@
   },
 
   "/": {
-    "target": "http://127.0.0.1:80/",
+    "target": "http://152.67.60.189:80/",
     "changeOrigin": true,
     "secure": false,
     "pathRewrite": {

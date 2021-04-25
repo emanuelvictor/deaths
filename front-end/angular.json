@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../back-end/application/presentation/",
+            "outputPath": "../container/application/presentation/",
             "index": "src/sistema/index.html",
             "main": "src/sistema/application/sistema-main.ts",
             "polyfills": "src/polyfills.ts",
@@ -79,5 +79,8 @@
       }
     }
   },
-  "defaultProject": "sistema"
+  "defaultProject": "sistema",
+  "cli": {
+    "analytics": "c880ccc6-fbca-4af1-8332-44fe14139371"
+  }
 }

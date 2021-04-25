@@ -3,8 +3,11 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
-    "sistema": "ng serve --proxy-config proxy.conf.json sistema --port 4200 --open",
-    "build": "ng build --prod sistema"
+    "development": "ng serve --proxy-config proxy.conf.json sistema --port 4200 --open",
+    "install": "echo Front-end install complete!",
+    "postinstall": "echo Front-end install complete!",
+    "build": "ng build --prod sistema",
+    "postbuild": "echo Front-end build complete!"
   },
   "dependencies": {
     "@angular/animations": "^8.2.7",
