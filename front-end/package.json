@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "development": "node_modules/.bin/ng serve --proxy-config proxy.conf.json sistema --port 4200 --open",
-    "postinstall": "echo Front-end install complete!",
+    "postinstall": "echo ---------------------------------------------------------- Front-end install complete! ----------------------------------------------------------",
     "build": "node_modules/.bin/ng build --prod sistema",
-    "postbuild": "echo Front-end build complete!"
+    "postbuild": "echo ---------------------------------------------------------- Front-end build complete! ----------------------------------------------------------"
   },
   "dependencies": {
     "@angular/animations": "^8.2.7",
