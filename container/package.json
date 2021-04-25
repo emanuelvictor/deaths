@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node application.js",
-    "poststart": "Container started!"
-  },
+    "poststart": "echo ---------------------------------------------------------- Containter started! ----------------------------------------------------------"  },
   "keywords": [
     "nodejs",
     "express",
