@@ -14,6 +14,6 @@ export class DeathRepository extends BaseRepository<any> {
   }
 
   getResume(): Promise<any> {
-    return this.httpClient.get<any>(this.collectionName + '/resume/123/123').toPromise();
+    return this.httpClient.get<any>(this.collectionName).toPromise();
   }
 }
