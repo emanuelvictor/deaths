@@ -64,8 +64,6 @@ export class VisualizarObituarioComponent implements OnInit {
 
           this.init_date = this.init_date.format('DD/MM/YYYY')
           this.final_date = this.final_date.format('DD/MM/YYYY')
-          console.log(this.init_date);
-          console.log(this.final_date);
           
           resume.TOTAL = resume.AGUARDANDO_RESULTADOS_DE_EXAMES + resume.MORTES_POR_COVID +  resume.MORTES_POR_OUTROS_MOTIVOS;
 
