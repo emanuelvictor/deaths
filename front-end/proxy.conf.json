@@ -1,17 +1,6 @@
 {
-
-  "/api": {
-    "target": "http://152.67.60.189/api",
-    "changeOrigin": true,
-    "secure": false,
-    "pathRewrite": {
-      "^/api": ""
-    },
-    "logLevel": "debug"
-  },
-
   "/": {
-    "target": "http://152.67.60.189/",
+    "target": "http://127.0.0.1:80/",
     "changeOrigin": true,
     "secure": false,
     "pathRewrite": {

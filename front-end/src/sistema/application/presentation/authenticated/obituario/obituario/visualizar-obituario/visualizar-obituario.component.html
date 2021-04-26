@@ -33,5 +33,36 @@
                 </ngx-charts-advanced-pie-chart>
             </div>
         </div>
+
+        <div layout='row' layout-sm='column' layout-xs='column'>
+
+            <div flex layout='row' layout-md='column' layout-xs='column'>
+                <div layout='column' flex layout-align='start start'>
+                    <label class='title' layout-align='start start'>Mortes por covid e faixa etária:</label>
+                    <!-- <label class='text' layout-align='start start'>Mortes por covid e faixa etária</label> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div layout='row' layout-sm='column' layout-xs='column'>
+
+            <div flex style='margin: 30px 0px 30px 0px;'>
+                <ngx-charts-advanced-pie-chart [results]="single3" [animations]="false"
+                    [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+                    [scheme]="{ domain: ['#A9A9A9', '#ff00ff' , 
+                    '#ffcc00',
+                    '#99cc33',
+                    '#339900',
+                    '#cc3300',
+                    '#fd4d4e', '#F6B800',  '#2DB45C' ,'#0040ff']}">
+                </ngx-charts-advanced-pie-chart>
+            </div>
+            
+        </div>
     </mat-card>
+
+    
+
 </div>
